@@ -1,0 +1,21 @@
+/* app.css — Geroo Jaipur Homepage (Option 1 · Heritage) */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #F4ECD8;
+  color: #1A1411;
+  font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+img { display: block; max-width: 100%; }
+
+button { font-family: inherit; }
+
+.geroo-stage {
+  width: 100%;
+  position: relative;
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Geroo Jaipur · Heritage textiles from Rajasthan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Hand-tied bandhej, leheriya and the lost weaves of Rajasthan — made the slow way by 142 karigars at our atelier on MI Road, Jaipur. Since 1998." />
+  <link rel="icon" href="assets/geroo-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Tenor+Sans&display=swap">
+
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+  <div id="root" class="geroo-stage"></div>
+
+  <!-- React + Babel (pinned w/ SRI) -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <!-- App modules (Babel-transpiled in browser) -->
+  <script type="text/babel" src="js/shared.jsx"></script>
+  <script type="text/babel" src="js/images.jsx"></script>
+  <script type="text/babel" src="js/sections.jsx"></script>
+  <script type="text/babel" src="js/HeritageHome.jsx"></script>
+
+  <!-- Mount -->
+  <script type="text/babel">
+    const PALETTE = {
+      bg: '#F4ECD8',
+      surface: '#FBF6E9',
+      ink: '#1A1411',
+      mute: '#6E5E4A',
+      line: '#D9CDB1',
+      accent: '#6B0F1A',
+      accentInk: '#FBF6E9',
+    };
+
+    ReactDOM.createRoot(document.getElementById('root'))
+      .render(<HeritageHome palette={PALETTE} />);
+  </script>
+
+</body>
+</html>
