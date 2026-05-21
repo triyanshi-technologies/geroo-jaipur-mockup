@@ -17,7 +17,7 @@ const HERO_SLIDES = [
     cta: 'Shop the Bridal Edit',
     sub: 'Book a bridal stylist · Free consultation',
     tone: 'burgundy',
-    badge: '52 pieces',
+    badge: 'BESTSELLERS',
     label: 'Bridal lehenga · mukaish work',
     src: () => IMG.hero.bridal,
     objectPosition: 'center 20%',
@@ -102,7 +102,7 @@ function HeroCarousel({ P, variant = 'heritage' }) {
             </div>
           </div>
 
-          <div style={{ position: 'relative', marginTop: 44 }}>
+          <div style={{ position: 'relative', marginTop: 18 }}>
             <span style={{
               display: 'inline-block', fontFamily: 'ui-monospace,monospace', fontSize: 10,
               letterSpacing: '0.2em', color: P.accentInk, background: P.accent,
