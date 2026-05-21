@@ -208,14 +208,11 @@ function HeroCarousel({ P, variant = 'heritage' }) {
 // CRO: real-time social proof under the hero.
 // ─────────────────────────────────────────────────────────────────────────────
 const TICKER_ITEMS = [
-  { city: 'Pune',      action: 'just bought',  what: 'Champa Bandhej Saree',     when: '2 min ago' },
-  { city: 'Dubai',     action: 'just bought',  what: 'Saanjh Gota Lehenga',      when: '6 min ago' },
-  { city: 'Bengaluru', action: 'is viewing',   what: 'Madhumati Bandhej',        when: 'now · 12 viewing' },
-  { city: 'London',    action: 'left a review', what: 'Kumud Leheriya · ★★★★★',   when: '14 min ago' },
-  { city: 'Delhi',     action: 'booked',       what: 'Bridal stylist consultation', when: '18 min ago' },
-  { city: 'Mumbai',    action: 'just bought',  what: 'Phool Zardozi Lehenga',    when: '21 min ago' },
-  { city: 'Singapore', action: 'just bought',  what: 'Vrinda Kota Doria',        when: '27 min ago' },
-  { city: 'Jaipur',    action: 'visited atelier', what: 'MI Road showroom',     when: '32 min ago' },
+  'Nimrat Kaur', 'Tripti Dimri', 'Sara Ali Khan', 'Malavika Mohanan',
+  'Neha Sargam', 'Tanya Maniktala', 'Simran Sharma', 'Jai Madaan',
+  'Shubhashree Ganguly', 'Payal C Gupta', 'Aastha Chaudhary', 'MAYAALAGH',
+  'Masoom Minavala', 'Supriya Shukla', 'Simran Kaul Hundal', 'Lekha Prajapati',
+  'Kautuka',
 ];
 
 function ActivityTicker({ P }) {
@@ -234,19 +231,14 @@ function ActivityTicker({ P }) {
           letterSpacing: '0.22em', textTransform: 'uppercase', color: P.accent,
           borderRight: `1px solid ${P.line}`, marginRight: 28, flexShrink: 0,
         }}>
-          <span style={{ display: 'inline-block', width: 6, height: 6, background: P.accent, borderRadius: '50%', marginRight: 8, transform: 'translateY(-1px)' }} />
-          LIVE
+          SPOTLIGHT
         </div>
         <div style={{ overflow: 'hidden', flex: 1 }}>
           <div className="geroo-ticker-track">
-            {[...TICKER_ITEMS, ...TICKER_ITEMS].map((it, j) => (
+            {[...TICKER_ITEMS, ...TICKER_ITEMS].map((name, j) => (
               <div key={j} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 12.5, color: P.ink, whiteSpace: 'nowrap' }}>
-                <Icon name="pin" size={13} stroke={P.mute} />
-                <span style={{ color: P.mute }}>Someone in</span>
-                <b style={{ fontWeight: 600 }}>{it.city}</b>
-                <span style={{ color: P.mute }}>{it.action}</span>
-                <i style={{ fontStyle: 'italic' }}>{it.what}</i>
-                <span className="mono" style={{ color: P.mute, fontSize: 11, letterSpacing: '0.08em' }}>· {it.when}</span>
+                <span style={{ display: 'inline-block', width: 4, height: 4, background: P.accent, borderRadius: '50%' }} />
+                <span style={{ fontFamily: 'ui-monospace,monospace', fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase' }}>{name}</span>
               </div>
             ))}
           </div>
