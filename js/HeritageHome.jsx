@@ -26,7 +26,7 @@ const HeritageHome = ({ palette }) => {
     .ht .card-hover:hover { transform: translateY(-4px); }
     .ht a, .ht button { color:inherit; }
     .ht footer .footer-link { position:relative; display:block; width:fit-content; cursor:pointer; }
-    .ht footer .footer-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:var(--ink); transition:width 0.25s ease; }
+    .ht footer .footer-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:var(--surface); transition:width 0.25s ease; }
     .ht footer .footer-link:hover::after { width:100%; }
   `;
 
@@ -377,7 +377,7 @@ const HeritageHome = ({ palette }) => {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ backgroundImage: 'url(assets/footer-bg.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: P.ink, color: 'var(--ink)', padding: '80px 0 30px' }}>
+      <footer style={{ backgroundColor: P.ink, color: P.surface, padding: '80px 0 30px' }}>
         <div style={{ padding: '0 60px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr 1fr', gap: 60, marginBottom: 60 }}>
             <div>
