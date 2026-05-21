@@ -92,34 +92,34 @@ function HeroCarousel({ P, variant = 'heritage' }) {
     >
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', height: 760 }}>
         {/* TEXT side */}
-        <div style={{ padding: '80px 80px 80px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', position: 'relative' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-            <div className="mono" style={{ fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase', color: P.mute }}>
+        <div style={{ padding: '64px 80px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', position: 'relative', overflow: 'hidden' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', height: 20, flexShrink: 0 }}>
+            <div className="mono" style={{ fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase', color: P.mute, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               {s.eyebrow}
             </div>
-            <div className="mono" style={{ fontSize: 11, letterSpacing: '0.22em', color: P.mute }}>
+            <div className="mono" style={{ fontSize: 11, letterSpacing: '0.22em', color: P.mute, flexShrink: 0, marginLeft: 16 }}>
               {String(i + 1).padStart(2, '0')} <span style={{ opacity: .4 }}>—</span> {String(n).padStart(2, '0')}
             </div>
           </div>
 
-          <div style={{ position: 'relative' }}>
+          <div style={{ position: 'relative', marginTop: 44 }}>
             <span style={{
               display: 'inline-block', fontFamily: 'ui-monospace,monospace', fontSize: 10,
               letterSpacing: '0.2em', color: P.accentInk, background: P.accent,
-              padding: '4px 10px', marginBottom: 28,
+              padding: '4px 10px', marginBottom: 20,
             }}>{s.badge}</span>
             <h1 style={{
-              fontFamily: displayFont, fontSize: isHeritage ? 88 : 104, lineHeight: 0.95,
+              fontFamily: displayFont, fontSize: isHeritage ? 72 : 88, lineHeight: 0.95,
               fontWeight: 400, margin: 0, letterSpacing: '-0.02em',
             }}>
               <div>{s.line1}</div>
               <div>{s.line2}</div>
               <div style={{ fontStyle: 'italic', color: P.accent }}>{s.line3}</div>
             </h1>
-            <p style={{ marginTop: 28, fontSize: 16, lineHeight: 1.65, color: P.mute, maxWidth: 460 }}>
+            <p style={{ marginTop: 20, fontSize: 16, lineHeight: 1.65, color: P.mute, maxWidth: 460 }}>
               {s.body}
             </p>
-            <div style={{ display: 'flex', gap: 14, marginTop: 36, alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: 14, marginTop: 28, alignItems: 'center' }}>
               <button style={{
                 display: 'inline-flex', alignItems: 'center', gap: 10, padding: '15px 26px',
                 background: P.ink, color: P.surface, border: 0,
@@ -135,7 +135,7 @@ function HeroCarousel({ P, variant = 'heritage' }) {
           </div>
 
           {/* Controls + dots */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 40 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto', paddingTop: 40 }}>
             <div style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
               {HERO_SLIDES.map((_, j) => (
                 <button key={j} onClick={() => setI(j)}
